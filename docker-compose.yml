@@ -1,0 +1,54 @@
+version: "3"
+
+services:
+  database:
+    image: postgres:16-alpine
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_DB=userlution
+    ports:
+      - '5432:5432'
+    volumes: 
+      - db:/var/lib/postgresql/data
+
+  router:
+    restart: unless-stopped
+    build:
+      dockerfile: Dockerfile.router
+      context: ./nginx
+    ports:
+      - '3080:80'
+
+  backend:
+    build:
+      dockerfile: Dockerfile
+      context: ./backend
+    volumes:
+      - ./backend:/var/www
+    depends_on:
+      - database
+
+  api:
+    build:
+      dockerfile: Dockerfile.backend
+      context: ./nginx
+    restart: unless-stopped
+    ports:
+      - 8000:80
+    volumes:
+      - ./backend:/var/www
+    depends_on:
+      - backend
+  
+  client:
+    build: 
+      dockerfile: Dockerfile
+      context: ./frontend
+    volumes:
+      - ./frontend:/app
+
+
+volumes:
+  db:
+    driver: local
