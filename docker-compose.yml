@@ -18,7 +18,7 @@ services:
       dockerfile: Dockerfile.router
       context: ./nginx
     ports:
-      - '3080:80'
+      - '80:80'
 
   backend:
     build:
@@ -45,6 +45,8 @@ services:
     build: 
       dockerfile: Dockerfile
       context: ./frontend
+    environment:
+      - WDS_SOCKET_PORT=0
     volumes:
       - ./frontend:/app
 
