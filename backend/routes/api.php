@@ -22,3 +22,6 @@ Route::middleware('auth:sanctum')->post('/logout', [AuthController::class, 'logo
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+Route::middleware('auth:sanctum')->get('/product', [ProductController::class, 'index']);
+Route::middleware('auth:sanctum')->get('/product/{product}', [ProductController::class, 'show']);

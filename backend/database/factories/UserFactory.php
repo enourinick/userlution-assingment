@@ -41,14 +41,14 @@ class UserFactory extends Factory
     public function adult(): static
     {
         return $this->state(fn (array $attributes) => [
-            'date_of_birth' => Carbon::createFromDate(fake()->date)->subYears(18)
+            'date_of_birth' => now()->subYears(18)
         ]);
     }
 
     public function underage(): static
     {
         return $this->state(fn (array $attributes) => [
-            'date_of_birth' => Carbon::createFromDate(fake()->date)->subYears(10)
+            'date_of_birth' => now()->subYears(10)
         ]);
     }
 }
