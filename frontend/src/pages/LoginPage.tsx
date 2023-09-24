@@ -18,9 +18,9 @@ const LoginPage: React.FC = () => {
     const response = await post<Login>("/api/login", data);
     if (response.status !== 200) {
       setLoginError(true);
+    } else {
+        replaceToProducts();
     }
-
-    replaceToProducts();
   };
 
   return (
