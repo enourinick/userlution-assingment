@@ -1,8 +1,32 @@
-# User lution assingment
+# Userlution assingment
 
 ## Instruction to run the application
 
+To run the application, make sure you have a fresh clone of the application and docker installed.
 
+the following command runs the application:
+
+```
+./config_and_run.sh
+```
+
+the command above will build all the containers (of course docker will build them :D), runs them, and executes database migrations and seed.
+
+> Note than the docker compose file is configured to map the port 80 of router proxy to port 80 of your machine, if your port 80 is already occupide you may change it by visiting docker-compose.yml at line 21 and change it like the following:
+>
+> ` - '8000:80'`
+>
+> the above port mapping indicates that port 80 of the `router` service will map to port 8000 of the host machine.
+
+you may use the following users:
+
+| email | password | age |
+| --- | --- | --- |
+| user@example.com | 123456 | 32 |
+| granduser@example.com | 123456 | 80 |
+| freebird@example.com | 123456 | 20 |
+| kiddo@example.com | 123456 | 5 |
+| 11@example.com | 123456 | 11 |
 
 ## Problem statement
 
@@ -36,6 +60,10 @@ That said, the application is fully dockerized as per the diagram below:
 
 The structure fo the backend is very simple. I decided to use single action pattern for our backend, therefore we have a layer of controllers in which are just responsible to make sure the action is authorized.
 
+#### Api doc
+
+before talking about any architechture, let's talk about documentation, you may find the api documentation of the application [here at docs/openapi-doc.yml](docs/openapi-doc.yml) in form of openapi v3.
+
 #### single actions and service layer
 
 > Note that thanks to laravel model binding, making sure if the products are found are handled by latavel route model binding, therefore if for example a user calls, `api/product/1000` and such a product doesn't exist in our database, laravel route model binding automatically throws a 404. On the other hand, if such a product (entity) exists in our database, it will automatically translates queries for it and translates it to an object.
@@ -63,6 +91,19 @@ Authroziation on the current application is also done using laravel policies, so
 ### Tests
 
 the main functionality of the application comes with a good amount of scenario coverate, I decided to go closer to Ditroit school of thoughts in testing, so I avodied mocking as much as possible and embraced TDD.
+
+
+#### Runing tests
+
+Although it's a good practice to go full TDD, I just went TDD for the main requested functionalities and only on APIs. So anyways to run tests, first make sure the application is up and running (at least the `database` and `backend` services should be up and running), and run the following command:
+
+```
+docker-compose exec -it backend php artisan migrate:fresh
+docker-compose exec -it backend php artisan test
+docker-compose exec -it backend php artisan db:seed
+```
+
+> Note that the tests would assume the database is empty, therefore the first command `docker-compose exec -it backend php artisan migrate:fresh` is necessary. also after running tests you mostlikely want to use the application again so the last command makes sure you get some data back in the database.
 
 ### database
 
