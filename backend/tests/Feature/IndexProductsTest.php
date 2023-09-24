@@ -22,7 +22,7 @@ class IndexProductsTest extends TestCase
 
     public function test_receive_a_paginated_list_of_products(): void
     {
-        $user = User::factory()->create();
+        $user = User::factory()->adult()->create();
 
         Category::factory()
             ->has(Product::factory()->count(20))
@@ -79,11 +79,38 @@ class IndexProductsTest extends TestCase
             'to' => 15,
             'total' => 40,
         ]);
+        $response->dump();
     }
 
-    public function test_show_only_items_with_no_age_restriction_to_underageds(): void
+    public function test_show_only_items_with_no_age_restriction_to_underages(): void
     {
         $user = User::factory()->underage()->create();
+
+        $unrestrictedProductCount = 10;
+        $unrestrictedCategory = Category::factory()
+            ->has(Product::factory()->count($unrestrictedProductCount))
+            ->unrestricted()
+            ->create();
+
+        $restrictedProductCount = 10;
+        Category::factory()
+            ->has(Product::factory()->count($restrictedProductCount))
+            ->restricted()
+            ->create();
+
+        $response = $this->actingAs($user)->getJson('/product');
+
+        $response->assertJson(
+            fn(AssertableJson $json) =>
+            $json->has(
+                'data',
+                $unrestrictedProductCount
+            )->etc()
+        );
+    }
+    public function test_show_only_items_with_no_age_restriction_to_overages(): void
+    {
+        $user = User::factory()->overage()->create();
 
         $unrestrictedProductCount = 10;
         $unrestrictedCategory = Category::factory()

@@ -51,4 +51,11 @@ class UserFactory extends Factory
             'date_of_birth' => now()->subYears(10)
         ]);
     }
+
+    public function overage(): static
+    {
+        return $this->state(fn (array $attributes) => [
+            'date_of_birth' => now()->subYears(40)
+        ]);
+    }
 }

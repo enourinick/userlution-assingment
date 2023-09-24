@@ -12,7 +12,10 @@ class IndexProductsAction {
 
     public function __invoke(User $user): LengthAwarePaginator {
         $eighteenYearsAgo = Carbon::now()->subYears(18);
+        $thirtyoneYearsAgo = Carbon::now()->subYears(31);
 
-        return ($this->getPaginatedProductsWithCategoriesService)($eighteenYearsAgo->lt($user->date_of_birth))->paginate();
+        return ($this->getPaginatedProductsWithCategoriesService)(
+                $eighteenYearsAgo->lt($user->date_of_birth) || $thirtyoneYearsAgo->gt($user->date_of_birth)
+            )->paginate();
     }
 }
