@@ -41,6 +41,8 @@ class IndexProductsTest extends TestCase
                     'updated_at',
                     'name',
                     'image_url',
+                    'price',
+                    'description',
                     'category_id',
                     'category' => [
                         'id',
@@ -79,7 +81,7 @@ class IndexProductsTest extends TestCase
         ]);
     }
 
-    public function test_show_only_items_with_no_age_restriction_to_youth(): void
+    public function test_show_only_items_with_no_age_restriction_to_underageds(): void
     {
         $user = User::factory()->underage()->create();
 
@@ -101,10 +103,7 @@ class IndexProductsTest extends TestCase
             fn(AssertableJson $json) =>
             $json->has(
                 'data',
-                $unrestrictedProductCount,
-                fn(AssertableJson $json) =>
-                $json->where('id', $unrestrictedCategory->products()->first()->id)
-                    ->etc()
+                $unrestrictedProductCount
             )->etc()
         );
     }

@@ -15,7 +15,7 @@ class CategorySeeder extends Seeder
     {
         Category::factory()
             ->has(Product::factory()->count(10))
-            ->count(20)
+            ->count(10)
             ->create();
     }
 }

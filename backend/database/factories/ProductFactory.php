@@ -19,6 +19,8 @@ class ProductFactory extends Factory
         return [
             'name' => fake()->unique()->word,
             'image_url' => fake()->imageUrl(600, 600),
+            'description' => implode('<br>', fake()->paragraphs(3)),
+            'price' => fake()->numberBetween($min = 1000, $max = 600000)
         ];
     }
 }

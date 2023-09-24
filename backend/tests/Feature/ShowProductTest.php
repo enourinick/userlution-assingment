@@ -49,6 +49,8 @@ class ShowProductTest extends TestCase
             "id" => $product->id,
             "name" => $product->name,
             "image_url" => $product->image_url,
+            "price" => $product->price,
+            "description" => $product->description,
             "category_id" => $product->category_id,
             "category" => [
                 "id" => $category->id,
@@ -88,6 +90,8 @@ class ShowProductTest extends TestCase
             "id" => $product->id,
             "name" => $product->name,
             "image_url" => $product->image_url,
+            "price" => $product->price,
+            "description" => $product->description,
             "category_id" => $product->category_id,
             "category" => [
                 "id" => $category->id,
@@ -113,6 +117,8 @@ class ShowProductTest extends TestCase
             "id" => $product->id,
             "name" => $product->name,
             "image_url" => $product->image_url,
+            "price" => $product->price,
+            "description" => $product->description,
             "category_id" => $product->category_id,
             "category" => [
                 "id" => $category->id,
@@ -138,6 +144,8 @@ class ShowProductTest extends TestCase
             "id" => $product->id,
             "name" => $product->name,
             "image_url" => $product->image_url,
+            "price" => $product->price,
+            "description" => $product->description,
             "category_id" => $product->category_id,
             "category" => [
                 "id" => $category->id,
