@@ -54,7 +54,6 @@ services:
       - /app/node_modules
       - ./frontend:/app
 
-
 volumes:
   db:
     driver: local
