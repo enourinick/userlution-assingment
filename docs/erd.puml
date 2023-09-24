@@ -1,0 +1,48 @@
+@startuml
+
+entity users {
+    id: integer
+    name: string
+    email: string
+    email_verified_at: timestamp
+    password: string
+    date_of_birth: Date
+    created_at: timestamp
+    updated_at: timestamp
+}
+
+entity prsonal_access_tokens {
+    id: integer
+    tokenable: morph
+    name: string
+    token: string
+    abilities: text
+    last_used_at: timestamp
+    expires_at: timestamp
+    created_at: timestamp
+    updated_at: timestamp
+}
+
+entity categories {
+    id: integer
+    name: string
+    has_age_restriction: boolean
+    created_at: timestamp
+    updated_at: timestamp
+}
+
+entity products {
+    id: integer
+    name: string
+    image_url: string
+    price: integer
+    description: text
+    category_id: integer
+    created_at: timestamp
+    updated_at: timestamp
+}
+
+categories::id *-- products::category_id
+users::id *-- prsonal_access_tokens::tokenable
+
+@enduml

@@ -1,0 +1,34 @@
+@startuml
+state "Router proxy" as router
+router: A Nginx set to redirect all calls with /api/* pattern to backend
+router: and all other calls to the frontend application.
+router: router listens on port 80!
+
+state "Frontend (ReactJS)" as FE
+FE: A frontend application in dev mode and listens on port 3000
+FE: (I left it in dev mode but it's very easy to just set it up in production mode)
+
+state Backend {
+    state "API container (NginX)" as API
+    API: this container is a NginX container hosting our PHP application
+    API: in order for this application to run it calls it's neighbouring 
+    API: container, "Backend (php/Laravel)", to intreprate php scripts.
+    API: API also listens on port 80 in its own container.
+
+    state "Backend (php/Laravel)" as PHP
+    PHP: A laravel application that only supports API calls
+    PHP: The application uses laravel/sanctum from authentication
+    PHP: this container is built on top of PHP 8.2-fpm.
+
+    state "Database (PGSQL)" as DB
+    DB: For the database I decided to use PostgreSQL, just a random choice!
+    DB: The database listens on the defualt PostgreSQL port, 5432.
+}
+
+
+[*] --> router
+router --> FE
+router --> API
+API --> PHP
+PHP --> DB
+@enduml

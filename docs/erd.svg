@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" height="457px" preserveAspectRatio="none" style="width:512px;height:457px;background:#FFFFFF;" version="1.1" viewBox="0 0 512 457" width="512px" zoomAndPan="magnify"><defs/><g><!--MD5=[8413f8248b2da7966d2de021109ec289]
+class users--><g id="elem_users"><rect codeLine="2" fill="#F1F1F1" height="179.9063" id="users" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="207" x="7" y="7"/><ellipse cx="87.75" cy="23" fill="#ADD1B2" rx="11" ry="11" style="stroke:#181818;stroke-width:1.0;"/><path d="M91.3643,29.5 L83.6445,29.5 L83.6445,17.1069 L91.3643,17.1069 L91.3643,19.2651 L86.0933,19.2651 L86.0933,21.938 L90.8662,21.938 L90.8662,24.0962 L86.0933,24.0962 L86.0933,27.3418 L91.3643,27.3418 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="37" x="108.25" y="28.291">users</text><line style="stroke:#181818;stroke-width:0.5;" x1="8" x2="213" y1="39" y2="39"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="70" x="13" y="56.5352">id: integer</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="86" x="13" y="73.0234">name: string</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="85" x="13" y="89.5117">email: string</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="195" x="13" y="106">email_verified_at: timestamp</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="114" x="13" y="122.4883">password: string</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="130" x="13" y="138.9766">date_of_birth: Date</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="151" x="13" y="155.4648">created_at: timestamp</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="157" x="13" y="171.9531">updated_at: timestamp</text><line style="stroke:#181818;stroke-width:0.5;" x1="8" x2="213" y1="178.9063" y2="178.9063"/></g><!--MD5=[1c290d8a6ee518a1d270f644df9a981f]
+class prsonal_access_tokens--><g id="elem_prsonal_access_tokens"><rect codeLine="13" fill="#F1F1F1" height="196.3945" id="prsonal_access_tokens" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="188" x="16.5" y="254"/><ellipse cx="31.5" cy="270" fill="#ADD1B2" rx="11" ry="11" style="stroke:#181818;stroke-width:1.0;"/><path d="M35.1143,276.5 L27.3945,276.5 L27.3945,264.1069 L35.1143,264.1069 L35.1143,266.2651 L29.8433,266.2651 L29.8433,268.938 L34.6162,268.938 L34.6162,271.0962 L29.8433,271.0962 L29.8433,274.3418 L35.1143,274.3418 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="156" x="45.5" y="275.291">prsonal_access_tokens</text><line style="stroke:#181818;stroke-width:0.5;" x1="17.5" x2="203.5" y1="286" y2="286"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="70" x="22.5" y="303.5352">id: integer</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="122" x="22.5" y="320.0234">tokenable: morph</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="86" x="22.5" y="336.5117">name: string</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="87" x="22.5" y="353">token: string</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="88" x="22.5" y="369.4883">abilities: text</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="164" x="22.5" y="385.9766">last_used_at: timestamp</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="151" x="22.5" y="402.4648">expires_at: timestamp</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="151" x="22.5" y="418.9531">created_at: timestamp</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="157" x="22.5" y="435.4414">updated_at: timestamp</text><line style="stroke:#181818;stroke-width:0.5;" x1="17.5" x2="203.5" y1="442.3945" y2="442.3945"/></g><!--MD5=[8d53228b184e70212eb202c858fab81b]
+class categories--><g id="elem_categories"><rect codeLine="25" fill="#F1F1F1" height="130.4414" id="categories" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="209" x="265" y="32"/><ellipse cx="329.75" cy="48" fill="#ADD1B2" rx="11" ry="11" style="stroke:#181818;stroke-width:1.0;"/><path d="M333.3643,54.5 L325.6445,54.5 L325.6445,42.1069 L333.3643,42.1069 L333.3643,44.2651 L328.0933,44.2651 L328.0933,46.938 L332.8662,46.938 L332.8662,49.0962 L328.0933,49.0962 L328.0933,52.3418 L333.3643,52.3418 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="71" x="350.25" y="53.291">categories</text><line style="stroke:#181818;stroke-width:0.5;" x1="266" x2="473" y1="64" y2="64"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="70" x="271" y="81.5352">id: integer</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="86" x="271" y="98.0234">name: string</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="197" x="271" y="114.5117">has_age_restriction: boolean</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="151" x="271" y="131">created_at: timestamp</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="157" x="271" y="147.4883">updated_at: timestamp</text><line style="stroke:#181818;stroke-width:0.5;" x1="266" x2="473" y1="154.4414" y2="154.4414"/></g><!--MD5=[ff69a6cca6f7e52e5ea254e6cd5fc379]
+class products--><g id="elem_products"><rect codeLine="33" fill="#F1F1F1" height="179.9063" id="products" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="169" x="285" y="262.5"/><ellipse cx="334.75" cy="278.5" fill="#ADD1B2" rx="11" ry="11" style="stroke:#181818;stroke-width:1.0;"/><path d="M338.3643,285 L330.6445,285 L330.6445,272.6069 L338.3643,272.6069 L338.3643,274.7651 L333.0933,274.7651 L333.0933,277.438 L337.8662,277.438 L337.8662,279.5962 L333.0933,279.5962 L333.0933,282.8418 L338.3643,282.8418 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="61" x="355.25" y="283.791">products</text><line style="stroke:#181818;stroke-width:0.5;" x1="286" x2="453" y1="294.5" y2="294.5"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="70" x="291" y="312.0352">id: integer</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="86" x="291" y="328.5234">name: string</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="116" x="291" y="345.0117">image_url: string</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="91" x="291" y="361.5">price: integer</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="112" x="291" y="377.9883">description: text</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="136" x="291" y="394.4766">category_id: integer</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="151" x="291" y="410.9648">created_at: timestamp</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="157" x="291" y="427.4531">updated_at: timestamp</text><line style="stroke:#181818;stroke-width:0.5;" x1="286" x2="453" y1="434.4063" y2="434.4063"/></g><!--MD5=[ff12901a101dc064fad1456b22a9432f]
+reverse link categories to products--><g id="link_categories_products"><path codeLine="44" d="M485.15,86.27 C505.71,141.31 486.47,388.5 455.5,388.5 " fill="none" id="categories-backto-products" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="476.51,76.63,477.543,83.7667,484.5281,85.558,483.4951,78.4213,476.51,76.63" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[65afae02d6a8a4d32d0b2bc7d44a84b0]
+reverse link users to prsonal_access_tokens--><g id="link_users_prsonal_access_tokens"><path codeLine="45" d="M224.55,61.47 C241.99,111.24 231.15,313.5 205.5,313.5 " fill="none" id="users-backto-prsonal_access_tokens" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="216.46,51.67,217.1919,58.8439,224.0954,60.9275,223.3635,53.7536,216.46,51.67" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[0da09380f424c43eaf53d6c2e79d41d2]
+@startuml
+
+entity users {
+    id: integer
+    name: string
+    email: string
+    email_verified_at: timestamp
+    password: string
+    date_of_birth: Date
+    created_at: timestamp
+    updated_at: timestamp
+}
+
+entity prsonal_access_tokens {
+    id: integer
+    tokenable: morph
+    name: string
+    token: string
+    abilities: text
+    last_used_at: timestamp
+    expires_at: timestamp
+    created_at: timestamp
+    updated_at: timestamp
+}
+
+entity categories {
+    id: integer
+    name: string
+    has_age_restriction: boolean
+    created_at: timestamp
+    updated_at: timestamp
+}
+
+entity products {
+    id: integer
+    name: string
+    image_url: string
+    price: integer
+    description: text
+    category_id: integer
+    created_at: timestamp
+    updated_at: timestamp
+}
+
+categories::id *- - products::category_id
+users::id *- - prsonal_access_tokens::tokenable
+
+@enduml
+
+PlantUML version 1.2022.7(Mon Aug 22 19:01:30 CEST 2022)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Default Encoding: UTF-8
+Language: en
+Country: DE
+--></g></svg>
