@@ -29,11 +29,6 @@ const ProductDetailsPage: React.FC = () => {
 
   return (
     <div className="product-details-container">
-      <div className="back-button">
-        <Link to="/products">
-          <button>Back</button>
-        </Link>
-      </div>
       {product !== null && (
         <div className="product-details">
           <div className="product-image">
@@ -55,6 +50,11 @@ const ProductDetailsPage: React.FC = () => {
         </div>
       )}
       {loading && <div className="loading-message">Loading...</div>}
+      <div className="back-button">
+        <Link to="/products">
+          <button>Back</button>
+        </Link>
+      </div>
     </div>
   );
 };

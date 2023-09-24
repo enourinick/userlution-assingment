@@ -127,7 +127,9 @@ input.error {
 }
 
 .back-button {
-  margin-bottom: 20px;
+  text-align: left;
+  width: 100%;
+  max-width: 800px;
 }
 
 .back-button button {
@@ -148,6 +150,7 @@ input.error {
   /* Take up the entire width of the container */
   max-width: 800px;
   /* Limit the width to a reasonable size */
+  margin-bottom: 20px;
 }
 
 .product-image {
