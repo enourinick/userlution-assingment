@@ -10,6 +10,6 @@ else
     cp "$ENV_DEV" "$ENV"
     docker-compose up -d --build
     docker-compose exec -it backend composer install
-    docker-compose exec -it migrate:fresh
-    docker-compose exec -it db:seed
+    docker-compose exec -it backend php artisan migrate:fresh
+    docker-compose exec -it backend php artisan db:seed
 fi
